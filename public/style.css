@@ -20,8 +20,8 @@ html, body {
 /* Header */
 
 header {
-    background-image: -webkit-linear-gradient(rgba(0, 0, 0, .3), rgba(0, 0, 0, .7)), url(img/header-img-min.jpg);
-    background-image: linear-gradient(rgba(0, 0, 0, .3), rgba(0, 0, 0, .7)), url(img/header-img-min.jpg);
+    background-image: -webkit-linear-gradient(rgba(0, 0, 0, .3), rgba(0, 0, 0, .7)), url(resources/css/img/header-img-min.jpg);
+    background-image: linear-gradient(rgba(0, 0, 0, .3), rgba(0, 0, 0, .7)), url(resources/css/img/header-img-min.jpg);
     height: 100vh;
     background-size: cover;
     background-position: center;
@@ -285,8 +285,8 @@ h2 {
 /* Testimonial Section */
 
 .testimonial-section {
-    background-image: -webkit-linear-gradient(rgba(0, 0, 0, .5), rgba(0, 0, 0, .8)), url(img/testimonial-background.jpg);
-    background-image: linear-gradient(rgba(0, 0, 0, .5), rgba(0, 0, 0, .8)), url(img/testimonial-background.jpg);
+    background-image: -webkit-linear-gradient(rgba(0, 0, 0, .5), rgba(0, 0, 0, .8)), url(resources/css/img/testimonial-background.jpg);
+    background-image: linear-gradient(rgba(0, 0, 0, .5), rgba(0, 0, 0, .8)), url(resources/css/img/testimonial-background.jpg);
     height: 600px;
     background-size: cover;
     background-attachment: fixed;

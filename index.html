@@ -1,350 +1,89 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Welcome to Firebase Hosting</title>
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> <!-- font-awesome -->
-    <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@100;300;400;500;700&display=swap"
-        rel="stylesheet"> <!-- Google Fonts -->
-    <link rel="stylesheet" href="vendors/css/fluid.css"> <!-- Auto-Responsive -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
-    <link rel="stylesheet" href="resources/css/style.css">
-    <link rel="stylesheet" href="resources/css/mediaquery.css">
-    <!-- Favicon -->
-    <link rel="apple-touch-icon" sizes="180x180" href="vendors/favicon/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="vendors/favicon/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="vendors/favicon/favicon-16x16.png">
-    <link rel="manifest" href="vendors/favicon/site.webmanifest">
-    <title>Digisolve - The Digital Agency</title>
-</head>
+    <!-- update the version number as needed -->
+    <script defer src="/__/firebase/9.2.0/firebase-app-compat.js"></script>
+    <!-- include only the Firebase features as you need -->
+    <script defer src="/__/firebase/9.2.0/firebase-auth-compat.js"></script>
+    <script defer src="/__/firebase/9.2.0/firebase-database-compat.js"></script>
+    <script defer src="/__/firebase/9.2.0/firebase-firestore-compat.js"></script>
+    <script defer src="/__/firebase/9.2.0/firebase-functions-compat.js"></script>
+    <script defer src="/__/firebase/9.2.0/firebase-messaging-compat.js"></script>
+    <script defer src="/__/firebase/9.2.0/firebase-storage-compat.js"></script>
+    <script defer src="/__/firebase/9.2.0/firebase-analytics-compat.js"></script>
+    <script defer src="/__/firebase/9.2.0/firebase-remote-config-compat.js"></script>
+    <script defer src="/__/firebase/9.2.0/firebase-performance-compat.js"></script>
+    <!-- 
+      initialize the SDK after all desired features are loaded, set useEmulator to false
+      to avoid connecting the SDK to running emulators.
+    -->
+    <script defer src="/__/firebase/init.js?useEmulator=true"></script>
 
-<body>
+    <style media="screen">
+      body { background: #ECEFF1; color: rgba(0,0,0,0.87); font-family: Roboto, Helvetica, Arial, sans-serif; margin: 0; padding: 0; }
+      #message { background: white; max-width: 360px; margin: 100px auto 16px; padding: 32px 24px; border-radius: 3px; }
+      #message h2 { color: #ffa100; font-weight: bold; font-size: 16px; margin: 0 0 8px; }
+      #message h1 { font-size: 22px; font-weight: 300; color: rgba(0,0,0,0.6); margin: 0 0 16px;}
+      #message p { line-height: 140%; margin: 16px 0 24px; font-size: 14px; }
+      #message a { display: block; text-align: center; background: #039be5; text-transform: uppercase; text-decoration: none; color: white; padding: 16px; border-radius: 4px; }
+      #message, #message a { box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24); }
+      #load { color: rgba(0,0,0,0.4); text-align: center; font-size: 13px; }
+      @media (max-width: 600px) {
+        body, #message { margin-top: 0; background: white; box-shadow: none; }
+        body { border-top: 16px solid #ffa100; }
+      }
+    </style>
+  </head>
+  <body>
+    <div id="message">
+      <h2>Welcome</h2>
+      <h1>Firebase Hosting Setup Complete</h1>
+      <p>You're seeing this because you've successfully setup Firebase Hosting. Now it's time to go build something extraordinary!</p>
+      <a target="_blank" href="https://firebase.google.com/docs/hosting/">Open Hosting Documentation</a>
+    </div>
+    <p id="load">Firebase SDK Loading&hellip;</p>
 
-    <header id="home">
-        <nav>
-            <img src="resources/img/digisolve-logo.png" alt="Digisolve Logo" class="logo">
-            <ul class="main-nav">
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
-        <div class="header-box">
-            <div class="header-box-text">
-                <h1>Digital Agency</h1>
-                <h2>The One Stop for all your Digital Solutions</h2>
-            </div>
-            <a href="#" class="btn btn-full js--scroll-to-contact">Get a Quote Today!</a>
-        </div>
-    </header>
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        const loadEl = document.querySelector('#load');
+        // // 🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥
+        // // The Firebase SDK is initialized and available here!
+        //
+        // firebase.auth().onAuthStateChanged(user => { });
+        // firebase.database().ref('/path/to/ref').on('value', snapshot => { });
+        // firebase.firestore().doc('/foo/bar').get().then(() => { });
+        // firebase.functions().httpsCallable('yourFunction')().then(() => { });
+        // firebase.messaging().requestPermission().then(() => { });
+        // firebase.storage().ref('/path/to/ref').getDownloadURL().then(() => { });
+        // firebase.analytics(); // call to activate
+        // firebase.analytics().logEvent('tutorial_completed');
+        // firebase.performance(); // call to activate
+        //
+        // // 🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥
 
-    <section class="about-section js--about-section" id="about">
-        <div class="row">
-            <div class="col span_1_of_2 about-box js--about-box">
-                <h2 class="about-heading">A Digital Agency Focused on Growing your Online Presence</h2>
-                <p class="about-para">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nisi eveniet fugiat odit
-                    voluptatibus.</p>
-                <p class="about-para">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugiat at voluptatem
-                    numquam obcaecatiodio.</p>
-                <a href="#" class="btn btn-ghost">Read More</a>
-            </div>
-            <div class="col span_1_of_2 about-box js--about-box">
-                <img src="resources/img/about-img.jpg" alt="Digisolve App on Laptop" class="laptop-img">
-            </div>
-        </div>
-    </section>
-
-    <section class="work-section">
-        <div class="row">
-            <h2 class="section-heading">Our Work</h2>
-            <h3 class="section-subheading">Lorem ipsum dolor sit amet consectetur adipisicing elit.</h3>
-        </div>
-        <ul class="work-portfolio clearfix">
-            <li>
-                <figure class="portfolio-img">
-                    <img src="resources/img/online-advertising.png" alt="Advertising Image">
-                    <p class="work-para">Online Advertising</p>
-                </figure>
-            </li>
-            <li>
-                <figure class="portfolio-img">
-                    <img src="resources/img/social-media-campaigns.png" alt="">
-                    <p class="work-para">Social Media Campaign</p>
-                </figure>
-            </li>
-            <li>
-                <figure class="portfolio-img">
-                    <img src="resources/img/ux-design.png" alt="">
-                    <p class="work-para">UX Design</p>
-                </figure>
-            </li>
-            <li>
-                <figure class="portfolio-img">
-                    <img src="resources/img/branding-digital-marketing.png" alt="">
-                    <p class="work-para">Branding Digital Marketing</p>
-                </figure>
-            </li>
-        </ul>
-    </section>
-
-    <section class="services-section js--services-section">
-        <div class="row">
-            <h2 class="section-heading">Our Services</h2>
-            <h3 class="section-subheading">Lorem ipsum dolor sit amet consectetur adipisicing elit.</h3>
-        </div>
-        <div class="row">
-            <div class="col span_1_of_4 services-box js--service-box">
-                <i class="fa fa-tags big-icon"></i>
-                <h4 class="services-heading">Branding</h4>
-                <p class="services-para">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-                <a href="#" class="services-link">Read More...</a>
-            </div>
-            <div class="col span_1_of_4 services-box js--service-box">
-                <i class="fa fa-pencil big-icon"></i>
-                <h4 class="services-heading">Content</h4>
-                <p class="services-para">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-                <a href="#" class="services-link">Read More...</a>
-            </div>
-            <div class="col span_1_of_4 services-box js--service-box">
-                <i class="fa fa-comment big-icon"></i>
-                <h4 class="services-heading">Marketing</h4>
-                <p class="services-para">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-                <a href="#" class="services-link">Read More...</a>
-            </div>
-            <div class="col span_1_of_4 services-box js--service-box">
-                <i class="fa fa-code big-icon spl"></i>
-                <h4 class="services-heading">Web Design</h4>
-                <p class="services-para">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-                <a href="#" class="services-link">Read More...</a>
-            </div>
-        </div>
-    </section>
-
-    <section class="partners">
-        <div class="row">
-            <h2 class="section-heading">Featured Clients</h2>
-            <h3 class="section-subheading">We've worked with some of the best Companies in the World. Here are some of
-                our Amazing Partners.</h3>
-        </div>
-        <div class="row">
-            <div class="col span_1_of_4">
-                <img src="resources/img/brand-logo-1.png" alt="Brand Logo" class="partner-logo">
-            </div>
-            <div class="col span_1_of_4">
-                <img src="resources/img/brand-logo-2.png" alt="Brand Logo" class="partner-logo">
-            </div>
-            <div class="col span_1_of_4">
-                <img src="resources/img/brand-logo-3.png" alt="Brand Logo" class="partner-logo">
-            </div>
-            <div class="col span_1_of_4">
-                <img src="resources/img/brand-logo-4.png" alt="Brand Logo" class="partner-logo">
-            </div>
-        </div>
-        <div class="row">
-            <div class="col span_1_of_4">
-                <img src="resources/img/brand-logo-5.png" alt="Brand Logo" class="partner-logo">
-            </div>
-            <div class="col span_1_of_4">
-                <img src="resources/img/brand-logo-6.png" alt="Brand Logo" class="partner-logo">
-            </div>
-            <div class="col span_1_of_4">
-                <img src="resources/img/brand-logo-7.png" alt="Brand Logo" class="partner-logo">
-            </div>
-            <div class="col span_1_of_4">
-                <img src="resources/img/brand-logo-8.png" alt="Brand Logo" class="partner-logo">
-            </div>
-        </div>
-    </section>
-
-    <section class="testimonial-section">
-        <div class="row">
-            <h2 class="testimonial-heading">Our Testimonials</h2>
-        </div>
-        <div class="row">
-            <div class="col span_1_of_3 testimonial-box">
-                <blockquote>
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Similique eos sunt porro odio rerum
-                    voluptas.
-                </blockquote>
-                <cite><img src="resources/img/client-1.jpg" alt="Arron Cruz">Arron Cruz</cite>
-            </div>
-            <div class="col span_1_of_3 testimonial-box">
-                <blockquote>
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Similique eos sunt porro odio rerum
-                    voluptas.
-                </blockquote>
-                <cite><img src="resources/img/client-2.jpg" alt="Jeff Jones">Jeff Jones</cite>
-            </div>
-            <div class="col span_1_of_3 testimonial-box">
-                <blockquote>
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Similique eos sunt porro odio rerum
-                    voluptas.
-                </blockquote>
-                <cite><img src="resources/img/client-3.jpg" alt="Robert James">Robert James</cite>
-            </div>
-        </div>
-    </section>
-
-    <section class="package-section js--package-section">
-        <div class="row">
-            <h2 class="packages-heading">Check Out Our Most Popular Packages</h2>
-        </div>
-        <div class="row">
-            <div class="col span_1_of_3">
-                <div class="package-box">
-                    <div>
-                        <h4 class="package-heading">Starter</h4>
-                        <p class="package-price">Rs. 999 <span>3 months</span></p>
-                        <p class="package-para">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-                    </div>
-                    <div>
-                        <ul>
-                            <li><i class="fa fa-check small-icon"></i>SEO, SMO and PPC</li>
-                            <li><i class="fa fa-check small-icon"></i>2 Blogs per Month</li>
-                            <li><i class="fa fa-check small-icon"></i>Facebook and Twitter Marketing</i></li>
-                            <li><i class="fa fa-check small-icon"></i>Monthly Performance</li>
-                            <li><i class="fa fa-check small-icon"></i>Traffic Report</li>
-                        </ul>
-                    </div>
-                    <div>
-                        <a href="#" class="btn btn-full">Sign Up Now</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col span_1_of_3">
-                <div class="package-box">
-                    <div>
-                        <h4 class="package-heading">Corporate</h4>
-                        <p class="package-price">Rs. 2999 <span>3 months</span></p>
-                        <p class="package-para">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-                    </div>
-                    <div>
-                        <ul>
-                            <li><i class="fa fa-check small-icon"></i>SEO, SMO and PPC</li>
-                            <li><i class="fa fa-check small-icon"></i>4 Blogs per Month</li>
-                            <li><i class="fa fa-check small-icon"></i>All Social Media Channels</i></li>
-                            <li><i class="fa fa-check small-icon"></i>Monthly Performance</li>
-                            <li><i class="fa fa-check small-icon"></i>Traffic Report</li>
-                        </ul>
-                    </div>
-                    <div>
-                        <a href="#" class="btn btn-full">Sign Up Now</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col span_1_of_3">
-                <div class="package-box js--enterprise">
-                    <div>
-                        <h4 class="package-heading">Enterprise</h4>
-                        <p class="package-price">Rs. 4999 <span>1 year</span></p>
-                        <p class="package-para">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-                    </div>
-                    <div>
-                        <ul>
-                            <li><i class="fa fa-check small-icon"></i>Personalized Marketing</li>
-                            <li><i class="fa fa-check small-icon"></i>8 Blogs per Month</li>
-                            <li><i class="fa fa-check small-icon"></i>All Social Media Channels</i></li>
-                            <li><i class="fa fa-check small-icon"></i>Monthly Performance</li>
-                            <li><i class="fa fa-check small-icon"></i>Traffic Report</li>
-                        </ul>
-                    </div>
-                    <div>
-                        <a href="#" class="btn btn-full">Sign Up Now</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="contact-section js--contact" id="contact">
-        <div class="row">
-            <h2 class="contact-heading">We're Happy to Hear from you!</h2>
-        </div>
-        <div class="row">
-            <form method="post" action="#" class="contact-form">
-                <div class="row">
-                    <div class="col span_1_of_3">
-                        <label for="name">Name</label>
-                    </div>
-                    <div class="col span_2_of_3">
-                        <input type="text" name="name" id="name" placeholder="Your Name" required>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col span_1_of_3">
-                        <label for="email">Email</label>
-                    </div>
-                    <div class="col span_2_of_3">
-                        <input type="email" name="email" id="email" placeholder="Your Email" required>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col span_1_of_3">
-                        <label for="newsletter">Newsletter?</label>
-                    </div>
-                    <div class="col span_2_of_3">
-                        <input type="checkbox" name="newsletter" id="newsletter" checked>&nbsp;Yes, Please!
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col span_1_of_3">
-                        <label for="message">Drop us a Line</label>
-                    </div>
-                    <div class="col span_2_of_3">
-                        <textarea type="message" id="message" placeholder="Your Message"></textarea>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col span_1_of_3">
-                        &nbsp;
-                    </div>
-                    <div class="col span_2_of_3">
-                        <a href="#" class="btn btn-full">Submit</a>
-                    </div>
-                </div>
-            </form>
-        </div>
-    </section>
-
-    <footer>
-        <div class="row">
-            <div class="col span_1_of_2">
-                <ul class="footer-nav">
-                    <li><a href="#">About Us</a></li>
-                    <li><a href="#">Blog</a></li>
-                    <li><a href="#">Help & Support</a></li>
-                    <li><a href="#">IOS App</a></li>
-                    <li><a href="#">Android App</a></li>
-                </ul>
-            </div>
-            <div class="col span_1_of_2">
-                <ul class="social-links">
-                    <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                    <li><a href="#"><i class="fa fa-instagram"></i></a></li>
-                    <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
-                    <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
-                    <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                </ul>
-            </div>
-        </div>
-        <div class="row">
-            <p>This Website has been Created for Educational Purpose.
-                <br>You can feel free to contact me regarding any issues.
-            </p>
-            <p>&copy; Created by Priyanshu Gupta</p>
-        </div>
-    </footer>
-
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script> <!-- (Jquery-Google Developer) -->
-    <!-- Downloaded from cdjns -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.2/respond.min.js"></script> <!-- (respond.js file) -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script> <!-- (html5shiv.js file) -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/selectivizr/1.0.2/selectivizr-min.js"></script> <!-- (selectivizr.js file) -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js"></script> <!-- waypoints file -->
-
-    <script src="resources/js/script.js"></script>
-</body>
-
+        try {
+          let app = firebase.app();
+          let features = [
+            'auth', 
+            'database', 
+            'firestore',
+            'functions',
+            'messaging', 
+            'storage', 
+            'analytics', 
+            'remoteConfig',
+            'performance',
+          ].filter(feature => typeof app[feature] === 'function');
+          loadEl.textContent = `Firebase SDK loaded with ${features.join(', ')}`;
+        } catch (e) {
+          console.error(e);
+          loadEl.textContent = 'Error loading the Firebase SDK, check the console.';
+        }
+      });
+    </script>
+  </body>
 </html>
